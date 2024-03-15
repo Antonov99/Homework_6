@@ -213,7 +213,7 @@ MonoBehaviour:
         value: 10
   characterView:
     animator: {fileID: 8911977094109464081}
-    shootVFX: {fileID: 19801142, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+    shootVFX: {fileID: 7998173851770877801}
     audio: {fileID: 6671604539261547558}
     shootSound: {fileID: 8300000, guid: 34c638d8d99ccfd44a261f13505ab317, type: 3}
     deathSound: {fileID: 8300000, guid: c5a6af7adb029df4ba0967bc4de9e7ac, type: 3}
@@ -228,4 +228,67 @@ Animator:
   m_CorrespondingSourceObject: {fileID: 3587277423669050949, guid: 4754efaa13741644aa1a61e4869e2c0d,
     type: 3}
   m_PrefabInstance: {fileID: 5360728574833883220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7998173851788825439
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6544177011230017064}
+    m_Modifications:
+    - target: {fileID: 195742, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_Name
+      value: BulletExplosionFire
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 437254, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b840149de5449b548821bfc78aa833ea, type: 3}
+--- !u!198 &7998173851770877801 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 19801142, guid: b840149de5449b548821bfc78aa833ea,
+    type: 3}
+  m_PrefabInstance: {fileID: 7998173851788825439}
   m_PrefabAsset: {fileID: 0}

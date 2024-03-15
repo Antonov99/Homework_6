@@ -114,6 +114,6 @@ MonoBehaviour:
     moveEnabled:
       value: 1
     movementDirection:
-      value: {x: 0, y: 0, z: 0}
+      value: {x: 0, y: 0, z: 1}
     moveSpeed:
-      value: 3
+      value: 1
