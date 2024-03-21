@@ -542,7 +542,7 @@ MonoBehaviour:
       movementDirection:
         value: {x: 0, y: 0, z: 0}
       moveSpeed:
-        value: 3
+        value: 4
     fireComponent:
       fireEnabled:
         value: 1

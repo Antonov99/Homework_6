@@ -1,6 +1,7 @@
 ﻿using System;
 using Atomic.Elements;
 using Atomic.Objects;
+using GameEngine.Data;
 using GameEngine.Mechanics;
 using UnityEngine;
 
@@ -13,6 +14,7 @@ namespace GameEngine.Components
         private AtomicFunction<bool> isAlive;
         public IAtomicValue<bool> IsAlive => isAlive; 
         
+        [Get(ObjectAPI.DeathEvent)]
         public AtomicEvent deathEvent;
         
         [Get(ObjectAPI.TakeDamageEvent)]

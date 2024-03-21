@@ -117,10 +117,12 @@ MonoBehaviour:
     movementDirection:
       value: {x: 0, y: 0, z: 1}
     moveSpeed:
-      value: 5
+      value: 30
   bulletComponent:
     damage:
-      value: 5
+      value: 1
+  unSpawnBulletComponent:
+    duration: 2
 --- !u!54 &1164730229807980624
 Rigidbody:
   m_ObjectHideFlags: 0

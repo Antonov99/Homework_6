@@ -2,6 +2,7 @@
 using Atomic.Elements;
 using Atomic.Extensions;
 using Atomic.Objects;
+using GameEngine.Data;
 using Gameplay;
 using UnityEngine;
 using Object = UnityEngine.Object;

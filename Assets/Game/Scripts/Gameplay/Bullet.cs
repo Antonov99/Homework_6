@@ -6,15 +6,20 @@ namespace Gameplay
 {
     public sealed class Bullet : AtomicObject
     {
-        [Section] public MoveComponent moveComponent;
+        [Section] 
+        public MoveComponent moveComponent;
 
         public BulletComponent bulletComponent;
+        
+        [SerializeField]
+        private UnSpawnBulletComponent unSpawnBulletComponent;
 
         public override void Compose()
         {
             base.Compose();
             moveComponent.Compose(transform);
             bulletComponent.Compose();
+            unSpawnBulletComponent.Compose();
         }
 
         private void OnCollisionEnter(Collision collision)
@@ -31,6 +36,7 @@ namespace Gameplay
         private void Update()
         {
             moveComponent.Update();
+            if (unSpawnBulletComponent.Update(Time.deltaTime)) Destroy(gameObject);
         }
 
         private void OnDestroy()

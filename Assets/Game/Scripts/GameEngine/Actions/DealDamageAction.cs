@@ -1,14 +1,13 @@
-﻿using System;
-using Atomic.Elements;
+﻿using Atomic.Elements;
 using Atomic.Extensions;
 using Atomic.Objects;
-using UnityEngine;
+using GameEngine.Data;
 
 namespace GameEngine.Actions
 {
     public sealed class DealDamageAction:IAtomicAction<IAtomicObject>
     {
-        private IAtomicValue<int> _damage;
+        private readonly IAtomicValue<int> _damage;
 
         public DealDamageAction(IAtomicValue<int> damage)
         {
