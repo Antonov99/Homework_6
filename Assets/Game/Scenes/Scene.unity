@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 1125839406}
   - component: {fileID: 1125839405}
   m_Layer: 5
-  m_Name: EndGamPopup
+  m_Name: EndGamePopup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1056,6 +1056,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Zombie
       objectReference: {fileID: 0}
+    - target: {fileID: 5091245192701188904, guid: 11b93d184812d86459969c85492d856b,
+        type: 3}
+      propertyPath: m_Layer
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 5091245192701188904, guid: 11b93d184812d86459969c85492d856b,
+        type: 3}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     - target: {fileID: 8472118559575143185, guid: 11b93d184812d86459969c85492d856b,
         type: 3}
       propertyPath: m_RootOrder
@@ -1323,7 +1333,7 @@ PrefabInstance:
     - target: {fileID: 7998173851789197145, guid: 281dafe6df7447c44824482b8bfb6eea,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8800329197594709221, guid: 281dafe6df7447c44824482b8bfb6eea,
         type: 3}

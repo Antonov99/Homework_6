@@ -26,7 +26,7 @@ namespace GameEngine.Mechanics
 
         private void OnTakeDamage(int damage)
         {
-            _hitPoints.Value = Math.Max(0, _hitPoints.Value - damage);
+            if(_hitPoints.Value>0) _hitPoints.Value = Math.Max(0, _hitPoints.Value - damage);
         }
     }
 }

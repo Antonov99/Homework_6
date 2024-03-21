@@ -1,5 +1,6 @@
 ﻿using System;
 using Atomic.Elements;
+using Atomic.Objects;
 using GameEngine.Mechanics;
 using UnityEngine;
 
@@ -13,7 +14,11 @@ namespace GameEngine.Components
         public IAtomicValue<bool> IsAlive => isAlive; 
         
         public AtomicEvent deathEvent;
+        
+        [Get(ObjectAPI.TakeDamageEvent)]
         public AtomicEvent<int> takeDamageEvent;
+        
+        [Get(ObjectAPI.HitPoints)]
         public AtomicVariable<int> hitPoints;
         
         private TakeDamageMechanic _takeDamageMechanic;
