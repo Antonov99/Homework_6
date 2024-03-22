@@ -21,7 +21,7 @@ namespace Gameplay.Character
         [Section] 
         public FireComponent fireComponent;
 
-        public RotationMechanic rotationMechanic;
+        public PlayerRotationMechanic playerRotationMechanic;
 
         private UpdateMechanics _stateController;
 
@@ -31,7 +31,7 @@ namespace Gameplay.Character
             moveComponent.Compose(transform);
             fireComponent.Compose();
 
-            rotationMechanic = new RotationMechanic(moveComponent.movementDirection,healthComponent.IsAlive,transform);
+            playerRotationMechanic = new PlayerRotationMechanic(healthComponent.IsAlive,transform);
 
             _stateController = new UpdateMechanics(() =>
             {
@@ -55,7 +55,8 @@ namespace Gameplay.Character
         {
             _stateController.Update();
             moveComponent.Update();
-            rotationMechanic.Update();
+            playerRotationMechanic.Update();
+            fireComponent.Update();
         }
 
         public void Dispose()

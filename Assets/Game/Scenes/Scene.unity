@@ -1462,6 +1462,11 @@ PrefabInstance:
       propertyPath: characterCore.healthComponent.hitPoints.value
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 7258470743661952307, guid: 281dafe6df7447c44824482b8bfb6eea,
+        type: 3}
+      propertyPath: characterCore.fireComponent.reloadDuration.value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7998173851789197145, guid: 281dafe6df7447c44824482b8bfb6eea,
         type: 3}
       propertyPath: m_RootOrder

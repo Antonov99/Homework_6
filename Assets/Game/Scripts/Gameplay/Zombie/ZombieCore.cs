@@ -1,4 +1,5 @@
 using System;
+using Atomic.Elements;
 using Atomic.Objects;
 using GameEngine.Components;
 using GameEngine.Mechanics;
@@ -22,10 +23,12 @@ namespace Gameplay.Zombie
 
         private UpdateMechanics _stateController;
 
-        private UpdateMovementDirectionMechanic _updateMovementDirectionMechanic;
+        private ZombieAIMechanic _zombieAIMechanic;
+        
+        public AtomicVariable<int> damage;
 
         [SerializeField] 
-        private Transform target;
+        private AtomicObject target;
 
         public void Compose()
         {
@@ -40,7 +43,7 @@ namespace Gameplay.Zombie
                 moveComponent.moveEnabled.Value = isAlive;
             });
 
-            _updateMovementDirectionMechanic = new UpdateMovementDirectionMechanic(target, transform,moveComponent);
+            _zombieAIMechanic = new ZombieAIMechanic(target, transform,moveComponent,damage);
         }
         
         public void OnEnable()
@@ -58,7 +61,7 @@ namespace Gameplay.Zombie
             _stateController.Update();
             moveComponent.Update();
             rotationMechanic.Update();
-            _updateMovementDirectionMechanic.Update();
+            _zombieAIMechanic.Update();
         }
 
         public void Dispose()

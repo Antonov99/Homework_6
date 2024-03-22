@@ -4,6 +4,7 @@ using Atomic.Objects;
 using GameEngine.Actions;
 using GameEngine.Data;
 using GameEngine.Functions;
+using GameEngine.Mechanics;
 using UnityEngine;
 
 namespace GameEngine.Components
@@ -21,6 +22,9 @@ namespace GameEngine.Components
         public SpawnBulletAction spawnBulletAction;
     
         public AtomicVariable<int> bullets;
+        public AtomicVariable<float> reloadDuration;
+
+        public AddBulletsMechanic addBulletsMechanic;
         
         [Get(ObjectAPI.FireAction)]
         public FireAction fireAction;
@@ -30,6 +34,13 @@ namespace GameEngine.Components
             spawnBulletAction.Compose(firePoint,bulletPrefab);
             shootCondition.Compose(bullets,fireEnabled);
             fireAction.Compose(spawnBulletAction,shootCondition,bullets,fireEvent);
+
+            addBulletsMechanic = new AddBulletsMechanic(bullets, reloadDuration);
+        }
+
+        public void Update()
+        {
+            addBulletsMechanic.Update();
         }
 
         public void Dispose()

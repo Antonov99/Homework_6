@@ -514,6 +514,8 @@ MonoBehaviour:
         value: {x: 0, y: 0, z: 0}
       moveSpeed:
         value: 3
+    damage:
+      value: 1
     target: {fileID: 0}
   zombieView:
     animator: {fileID: 9012401556749380825}
